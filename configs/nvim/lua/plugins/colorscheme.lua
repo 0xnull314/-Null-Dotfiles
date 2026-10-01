@@ -8,15 +8,16 @@ return {
 			background = "hard",
 			transparent_background_level = 1,
 			ui_contrast = "high",
+			italics = true,
 			dim_inactive_windows = false,
 			colours_override = function(palette)
-				palette.bg_dim = "#121212"
-				palette.bg0 = "#181818"
-				palette.bg1 = "#282828"
-				palette.bg2 = "#32302f"
-				palette.bg3 = "#32302f"
-				palette.bg4 = "#45403d"
-				palette.bg5 = "#45403d"
+				palette.bg_dim = "#0d0f10"
+				palette.bg0 = "#141617"
+				palette.bg1 = "#1a1d1f"
+				palette.bg2 = "#212427"
+				palette.bg3 = "#282b2e"
+				palette.bg4 = "#323538"
+				palette.bg5 = "#3c3f43"
 			end,
 			on_highlights = function(hl, palette)
 				hl.TelescopeBorder = { fg = palette.bg2, bg = "NONE" }
