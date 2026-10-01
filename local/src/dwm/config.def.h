@@ -116,12 +116,14 @@ static const char *term[]          = {"st", NULL};
 static const char *browser[]       = {"brave", NULL};
 static const char *editor[]        = {"st", "-e", "nvim", NULL};
 static const char *files[]         = {"st", "-e", "yazi", NULL};
-static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", NULL};
-static const char *launcher[]      = {"rofi",   "-show",
-                                      "drun",   "-show-icons",
-                                      "-theme", "~/.config/rofi/launcher.rasi",
-                                      NULL};
-static const char *wallpaper[]     = {
+static const char *scratchpadcmd[] = {
+    "s",  "st",         "-t", "scratchpad", "-e", "tmux", "attach-session",
+    "-t", "scratchpad", NULL};
+static const char *launcher[]  = {"rofi",   "-show",
+                                  "drun",   "-show-icons",
+                                  "-theme", "~/.config/rofi/launcher.rasi",
+                                  NULL};
+static const char *wallpaper[] = {
     "sh", "-c", "~/.local/src/dwm/scripts/wallpapers.sh", NULL};
 static const char *bookscmd[] = {"sh", "-c",
                                  "~/.local/src/dwm/scripts/books.sh", NULL};

@@ -1,23 +1,27 @@
 local map = vim.keymap.set
-
-map("n", "", "ggVG", { desc = "Select all text" })
-
-map("i", "jk", "", { desc = "Exit to normal mode" })
-
-map("n", "h", "nohlsearch", { desc = "Clear search highlights" })
-
-map("n", "ss", "split", { desc = "Horizontal split" })
-map("n", "sd", "vsplit", { desc = "Vertical split" })
-map("n", "sq", "q", { desc = "Close file" })
-
-map("n", "", "h", { desc = "Window left" })
-map("n", "", "j", { desc = "Window down" })
-map("n", "", "k", { desc = "Window up" })
-map("n", "", "l", { desc = "Window right" })
-
-map("n", "", "bprevious", { desc = "Previous buffer" })
-map("n", "", "bnext", { desc = "Next buffer" })
-
+map("n", "<C-a>", "ggVG", { desc = "Seleccionar todo el texto" })
+map("i", "jk", "<Esc>", { desc = "Volver al modo normal" })
+map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape y limpiar búsqueda" })
+map("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Limpiar resaltado de búsqueda" })
+map("n", "ss", "<cmd>split<CR>", { desc = "Split Horizontal" })
+map("n", "sd", "<cmd>vsplit<CR>", { desc = "Split Vertical" })
+map("n", "sq", "<cmd>q<CR>", { desc = "Cerrar Archivo" })
+map("n", "<C-h>", "<C-w>h", { desc = "Ventana Izquierda" })
+map("n", "<C-j>", "<C-w>j", { desc = "Ventana Abajo" })
+map("n", "<C-k>", "<C-w>k", { desc = "Ventana Arriba" })
+map("n", "<C-l>", "<C-w>l", { desc = "Ventana Derecha" })
+map("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Buffer Anterior" })
+map("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Siguiente Buffer" })
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Mover bloque abajo" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Mover bloque arriba" })
+map("v", "<", "<gv", { desc = "Quitar sangría y mantener selección" })
+map("v", ">", ">gv", { desc = "Añadir sangría y mantener selección" })
+map("v", "p", '"_dP', { desc = "Pegar sin sobrescribir el portapapeles" })
+map("n", "<C-d>", "<C-d>zz", { desc = "Scroll abajo centrado" })
+map("n", "<C-u>", "<C-u>zz", { desc = "Scroll arriba centrado" })
+map("n", "n", "nzzzv", { desc = "Siguiente resultado de búsqueda centrado" })
+map("n", "N", "Nzzzv", { desc = "Resultado anterior de búsqueda centrado" })
+map("n", "<leader>cq", vim.diagnostic.setloclist, { desc = "Lista de diagnósticos en loclist" })
 map("n", "bd", function()
 	local ok, snacks = pcall(require, "snacks")
 	if ok then
@@ -25,18 +29,4 @@ map("n", "bd", function()
 	else
 		vim.cmd("bp | bd #")
 	end
-end, { desc = "Close current buffer without breaking splits" })
-
-map("v", "J", ":m '>+1gv=gv", { desc = "Move block down" })
-map("v", "K", ":m '<-2gv=gv", { desc = "Move block up" })
-
-map("v", "<", "", ">gv", { desc = "Indent and keep selection" })
-
-map("v", "p", '"_dP', { desc = "Paste without overwriting register" })
-
-map("n", "", "zz", { desc = "Scroll down centered" })
-map("n", "", "zz", { desc = "Scroll up centered" })
-map("n", "n", "nzzzv", { desc = "Next search result centered" })
-map("n", "N", "Nzzzv", { desc = "Previous search result centered" })
-
-map("n", "cq", vim.diagnostic.setloclist, { desc = "Diagnostics list to loclist" })
+end, { desc = "Cerrar Buffer actual sin romper splits" })
