@@ -29,12 +29,12 @@ Este repositorio documenta mi configuración diaria, construida pieza por pieza 
 
 ## 🛠️ System & Tools
 
-| Componente | Selección | Notas / Detalles |
+| Componente | Selección | Detalles |
 | :--- | :--- | :--- |
 | **OS** | Void Linux (`x86_64`) | Rolling release independiente sin `systemd` |
 | **Init System** | `runit` | Gestión de servicios rápida y minimalista |
 | **Session / Audio** | `seatd` + `PipeWire` | Sin `elogind` ni PulseAudio tradicional |
-| **Window Manager** | `dwm` (**ZenithWM**) | Parcheado y compilado desde fuente en C |
+| **Window Manager** | `dwm` | Parcheado y compilado desde fuente en C |
 | **Compositor** | `picom` | Backend `xrender` (sin blur ni animaciones pesadas) |
 | **Terminal** | `st` (Simple Terminal) | Con soporte para parches, ligaduras y `tmux` |
 | **Shell** | `zsh` | Configurado con `Powerlevel10k` y plugins ligeros |
