@@ -17,13 +17,13 @@ Este repositorio documenta mi configuración diaria, construida pieza por pieza 
 
 ## 📷 Previews
 
-| Vista Principal (Tiling & Barra Superior) | Flujo de Desarrollo (Neovim + Tmux) |
+| Vista Principal | Flujo de Desarrollo |
 | :---: | :---: |
-| ![Desktop Screenshot](./assets/desktop.png) | ![Desktop Screenshot](./assets/desktop2.png) |
+| ![Desktop Screenshot](./assets/desktop2.png) | ![Desktop Screenshot](./assets/desktop3.png) |
 
-| Aplicaciones TUI & Multimedia | Distribución de Layouts & Scratchpad |
+| Aplicaciones TUI | Layouts |
 | :---: | :---: |
-| ![Desktop Screenshot](./assets/desktop3.png) | ![Layout Screenshot](./assets/layout.png) |
+| ![Desktop Screenshot](./assets/desktop.png) | ![Layout Screenshot](./assets/layout.png) |
 
 ---
 
