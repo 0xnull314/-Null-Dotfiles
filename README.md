@@ -7,14 +7,6 @@ Mi entorno personal en **Void Linux**, diseñado bajo una filosofía de **minima
 
 ---
 
-## 👨‍💻 Sobre Mí
-
-Soy **//Null** (SoyNULL), desarrollador y entusiasta de los sistemas Unix-like. Me apasiona entender cómo funcionan las cosas por debajo del capó: desde la gestión de procesos y compilación en C, hasta la automatización, optimización de sistemas modestos y diseño de interfaces basadas en texto. 
-
-Este repositorio documenta mi configuración diaria, construida pieza por pieza para evitar dependencias innecesarias y mantener un sistema ligero, predecible y completamente adaptado a mi forma de trabajar.
-
----
-
 ## 📷 Previews
 
 | Vista Principal | Flujo de Desarrollo |
